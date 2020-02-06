@@ -6,29 +6,29 @@ ALTER TABLE Contrats ADD EmployeID [int];
 ALTER TABLE Contrats
 ADD CONSTRAINT EmployeID FOREIGN KEY (EmployeID) REFERENCES Employe(EmployeID);
 
-ALTER TABLE Produit ADD MagasinID [int];
+ALTER TABLE Produit ADD Magasin1ID [int];
 ALTER TABLE Produit
-ADD CONSTRAINT MagasinID FOREIGN KEY (MagasinID) REFERENCES Magasin(MagasinID);
+ADD CONSTRAINT Magasin1ID FOREIGN KEY (Magasin1ID) REFERENCES Magasin(MagasinID);
 
 ALTER TABLE Stock ADD ProduitID [int];
 ALTER TABLE Stock
 ADD CONSTRAINT ProduitID FOREIGN KEY (ProduitID) REFERENCES Produit(ProduitID);
 
-ALTER TABLE Rayon ADD ProduitID [int];
+ALTER TABLE Rayon ADD Produit1ID [int];
 ALTER TABLE Rayon
-ADD CONSTRAINT ProduitID FOREIGN KEY (ProduitID) REFERENCES Produit(ProduitID);
+ADD CONSTRAINT Produit1ID FOREIGN KEY (Produit1ID) REFERENCES Produit(ProduitID);
 
-ALTER TABLE Vente ADD ProduitID [int];
+ALTER TABLE Vente ADD Produit2ID [int];
 ALTER TABLE Vente
-ADD CONSTRAINT ProduitID FOREIGN KEY (ProduitID) REFERENCES Produit(ProduitID);
+ADD CONSTRAINT Produit2ID FOREIGN KEY (Produit2ID) REFERENCES Produit(ProduitID);
 
-ALTER TABLE Fournisseur ADD MagasinID [int];
+ALTER TABLE Fournisseur ADD Magasin2ID [int];
 ALTER TABLE Fournisseur
-ADD CONSTRAINT MagasinID FOREIGN KEY (MagasinID) REFERENCES Magasin(MagasinID);
+ADD CONSTRAINT Magasin2ID FOREIGN KEY (Magasin2ID) REFERENCES Magasin(MagasinID);
 
-ALTER TABLE Client ADD MagasinID [int];
+ALTER TABLE Client ADD Magasin3ID [int];
 ALTER TABLE Client
-ADD CONSTRAINT MagasinID FOREIGN KEY (MagasinID) REFERENCES Magasin(MagasinID);
+ADD CONSTRAINT Magasin3ID FOREIGN KEY (Magasin3ID) REFERENCES Magasin(MagasinID);
 
 ALTER TABLE Commande ADD ClientID [int];
 ALTER TABLE Commande
@@ -36,4 +36,4 @@ ADD CONSTRAINT ClientID FOREIGN KEY (ClientID) REFERENCES Client(ClientID);
 
 ALTER TABLE Facture ADD ClientID [int];
 ALTER TABLE Facture
-ADD CONSTRAINT ClientID FOREIGN KEY (ClientID) REFERENCES Client(ClientID);
+ADD CONSTRAINT Client1ID FOREIGN KEY (Client1ID) REFERENCES Client(ClientID);
