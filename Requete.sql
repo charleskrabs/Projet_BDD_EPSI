@@ -14,7 +14,11 @@ WHERE R.QUANTITE<51 AND P.PRIX<20
 ORDER BY PRIX
 
 
---
-SELECT
-FROM 
-WHERE
+--les employes non livreur qui ont un salaire superieur a 2000€
+SELECT E.NOM, E.PRENOM, C.SALAIRE
+FROM EMPLOYE E, CONTRATS C, MAGASIN M
+WHERE C.SALAIRE>2000(
+					SELECT E.Estlivreur
+					FROM EMPLOYE E
+					WHERE E.Estlivreur=0
+					)
