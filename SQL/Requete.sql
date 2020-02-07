@@ -52,4 +52,8 @@ DELETE P.NOM, P.Quantite
 FROM Produit P
 WHERE P.Quantite < 10
 
--- 
+--Moins 20% sur les produits avec une quantité < a 5000 en stock
+
+UPDATE PRODUIT, STOCK
+SET Prix = Prix - ((20 * Prix) / 100)
+WHERE quantite < 5000
