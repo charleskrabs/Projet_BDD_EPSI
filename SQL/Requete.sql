@@ -46,4 +46,10 @@ FROM Produit P, Stock S, Rayon R
 WHERE S.quantite < 100 AND R.quantite < 20;
 
 
+-- supprimer un produit quand il a une quantité inférieur a 10
 
+DELETE P.NOM, P.Quantite
+FROM Produit P
+WHERE P.Quantite < 10
+
+-- 
